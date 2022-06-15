@@ -1,1 +1,2 @@
-uuid=["001","002","yGt"]
+uuid=["001","002","yGt"];
+Call.sendMessage("成功");
