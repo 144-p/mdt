@@ -1,7 +1,6 @@
-socket = Packages.java.net.Socket("mindustry.vicp.io",6001);
-write = new Packages.java.io.DataOutputStream(socket.getOutputStream());
-read = new Packages.java.io.DataInputStream(socket.getInputStream());
-socket_on=true;
+var socket = Packages.java.net.Socket("mindustry.vicp.io",6001);
+var write = new Packages.java.io.DataOutputStream(socket.getOutputStream());
+var read = new Packages.java.io.DataInputStream(socket.getInputStream());
 write.writeUTF("144_");
 write.writeUTF("144_C");
 new java.lang.Thread(run(()=>{
