@@ -7,7 +7,6 @@ new java.lang.Thread(run(()=>{
 	while(true){
 	try{
 		Call.sendMessage(read.readUTF().substring(1));
-	}
 	}catch(error){read.close();write.close();}
 	}
 })).start()
