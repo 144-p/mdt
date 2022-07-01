@@ -1,0 +1,18 @@
+socket = Packages.java.net.Socket("mindustry.vicp.io",6001);
+write = new Packages.java.io.DataOutputStream(socket.getOutputStream());
+read = new Packages.java.io.DataInputStream(socket.getInputStream());
+socket_on=true;
+write.writeUTF("144_");
+write.writeUTF("144_C");
+new java.lang.Thread(run(()=>{
+	while(true){
+	try{
+		Call.sendMessage(read.readUTF().substring(1));
+	}
+	}catch(error){read.close();write.close();}
+	}
+})).start()
+
+function f(e){
+write.writeUTF("%[gray][[[white]2R2T[gray]] ["+e.player.name+"[white]]: "+e.message);
+}
