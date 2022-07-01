@@ -12,6 +12,6 @@ new java.lang.Thread(run(()=>{
 	}
 })).start()
 
-function f(e){
+Events.on(EventType.PlayerChatEvent, cons(e=>{
 write.writeUTF("%[gray][[[white]2R2T[gray]] ["+e.player.name+"[white]]: "+e.message);
 }
